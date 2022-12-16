@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personality Quiz</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel='stylesheet' href='project.css'>
+</head>
+
+<body>
+
+    <div class="cover">
+
+        <div class="title">Which place should you travel to next?</div>
+        <img src="cover.jpg" alt="Girl feeling happy travelling" style="max-width:100%;height:auto;" class="center">
+        <p> Do you love to hike the mountains or sun-bath on the beach or just shop around the city? Take the quiz to find out which destination fits your personality the best. </p>
+
+        <button class="start">Start Quiz</button>
+
+    </div>
+
+    <div class="quiz-container" >
+
+        <div id="question" class="question"></div>
+
+        <div class="options-container">
+        <label class="option">
+            <input class="opacity" type="radio" name="option" value="1" />
+            <span class="option1"></span>
+            <img class="image" style="object-fit: cover;">
+
+        </label>
+        <label class="option">
+            <input class="opacity" type="radio" name="option" value="2" />
+            <span class="option2"></span>
+            <img class="image" style="object-fit: cover;">
+            
+        </label>
+        <label class="option">
+            <input class="opacity" type="radio" name="option" value="3" />
+            <span class="option3"></span>
+            <img class="image" style="object-fit: cover;">
+            
+        </label>
+        <label class="option">
+            <input class="opacity" type="radio" name="option" value="4" />
+            <span class="option4"></span>
+            <img class="image" style="object-fit: cover;">
+            
+        </label>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="controls">
+            <button type="circle" class="previous"><</button>
+            <button class="next">></button>
+        </div>
+    </div>
+
+
+    <div class="result">
+
+    </div>
+
+    <script src='project.js'></script>
+</body>
+</html>
