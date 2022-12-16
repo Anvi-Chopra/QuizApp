@@ -1,0 +1,251 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  line-height: 1.8rem;
+  background-image: url("bg.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  width: 100%;
+  height: 100%; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+  background-attachment: fixed;
+  
+}
+.cover {
+  font-size: 1.5rem;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px white;
+  padding: 3rem;
+  text-shadow: 0 1px #00000010;
+  width: 60%;
+  height: 100%;
+  margin: 4rem auto;
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+  background: #ffffff;
+  text-align: justify;
+  text-justify: inter-word;
+
+}
+.quiz-container {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px white;
+  padding: 5rem;
+  text-shadow: 0 1px #00000010;
+  margin: 4rem auto;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  color: #8c3b2b;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 2.2rem;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  text-justify: inter-word;
+  /*text-transform: uppercase;*/
+}
+.question {
+  color: #785847;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.options-container {
+  width: 100%;
+  height: 100%;
+  display:  grid;
+  grid-template-columns:  repeat(2,auto);
+  grid-template-columns:  50% 50%;
+  grid-template-rows: 50vh 50vh;
+  gap: 10px;
+  margin: 20px 0;
+
+}
+label{
+ display:inline-block;
+}
+
+.option {
+  color: #000000;
+  background: #dddddd;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  float: center;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding-top: 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.image {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0.5rem;
+  object-fit: fit;
+}
+
+.option:hover {
+  background: #75716e;
+  transform: scale(1.05);
+}
+
+.opacity {
+  position: absolute;
+  opacity: 0;
+  width: 0; 
+}
+
+.option input:checked + span{
+  font-weight: bold;
+  background: #75716e;
+}
+
+.option input:checked {
+  background-color: #75716e;
+}
+
+.controls > * {
+  margin: 1rem;
+}
+button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-weight: 300;
+  color: white;
+  outline: none;
+  transform: scale(0.98);
+  transition: all 0.2s;
+}
+
+button.start{
+  width: 50%;
+  background: #96725f;
+  color: #ffffff;
+  font-size: 2rem;
+  transition: all 0.4s;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  align-self: center;
+
+}
+
+button.previous {
+  background: #96725f;
+  font-size: 1.5rem;
+}
+button.next {
+  background: #96725f;
+  float: right;
+  font-size: 1.5rem;
+}
+button.restart {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: all 0.4s;
+  background: #96725f;
+  align-self: center;
+}
+button:hover {
+  background: #75716e;
+}
+button:hover,
+button:focus {
+  transform: scale(1);
+  font-weight: 500;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  min-height: 100vh;
+}
+.final-score {
+  color: #de9e5d;
+  text-shadow: 1px 1px #595946;
+  background: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 4rem;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  width: 60%;
+  height: 100%;
+}
+.summary {
+  font-size: 2rem;
+  line-height: 2rem;
+  text-shadow: 1px 1px #ffffff50;
+  color: #000000;
+  background: #de9e5d;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.final-score h1 {
+  align-self: center;
+  font-size: 3rem;
+}
